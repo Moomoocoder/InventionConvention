@@ -1,74 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Maker</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-        header {
-            background: #ff6347;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-        }
-        nav {
-            margin: 20px 0;
-        }
-        nav a {
-            margin: 0 15px;
-            color: white;
-            text-decoration: none;
-        }
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Fool's Guide to Chess</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 250px; /* spacing between boxes so info panels have room */
+      padding: 20px;
+    }
+
+    .piece-box {
+      width: 150px;
+      height: 150px;
+      background: #fff;
+      border: 2px solid #333;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .piece-box:hover {
+      transform: scale(1.05);
+    }
+
+    .piece-name {
+      font-size: 20px;
+      font-weight: bold;
+      z-index: 1;
+    }
+
+    .info {
+      position: absolute;
+      top: 0;
+      left: 100%; /* appear to the right */
+      width: 200px;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      color: #fff;
+      padding: 10px;
+      font-size: 14px;
+      opacity: 0;
+      transform: translateX(20px); /* start slightly offset */
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      border-radius: 0 8px 8px 0;
+      display: flex;
+      align-items: center;
+      z-index: 10; /* ensure it layers above neighbors */
+    }
+
+    .piece-box:hover .info {
+      opacity: 1;
+      transform: translateX(0); /* slide in smoothly */
+    }
+  </style>
 </head>
 <body>
 
-<header>
-            <h1>Welcome to Food Maker</h1>
-            <nav>
-                <a href="menu.html">About Product</a>
-                <a href="buy.html">Buy</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </header>
-    </nav>
-</header>
+  <div class="piece-box">
+    <div class="piece-name">Pawn</div>
+    <div class="info">Moves forward one square, captures diagonally. First move can advance two squares.</div>
+  </div>
 
+  <div class="piece-box">
+    <div class="piece-name">Rook</div>
+    <div class="info">Moves any number of squares vertically or horizontally.</div>
+  </div>
 
-<section id="about">
-    <h2>About Us</h2>
-    <p>At Food Maker, we prioritize spending time on what truly matters. We value meaningful moments and cherish life's essentials. Our mission is to focus on what’s important and help others do the same.</p>
-</section>
+  <div class="piece-box">
+    <div class="piece-name">Knight</div>
+    <div class="info">Moves in an L-shape: two squares in one direction, then one square perpendicular. Can jump over pieces.</div>
+  </div>
 
-<section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@foodmaker.com</p>
-    <p>Phone: (123) 456-7890</p>
-</section>
+  <div class="piece-box">
+    <div class="piece-name">Bishop</div>
+    <div class="info">Moves any number of squares diagonally.</div>
+  </div>
 
-<footer>
-    <p>&copy; 2025 Food Maker. All Rights Reserved.</p>
-</footer>
+  <div class="piece-box">
+    <div class="piece-name">Queen</div>
+    <div class="info">Moves any number of squares in any direction: vertically, horizontally, or diagonally.</div>
+  </div>
+
+  <div class="piece-box">
+    <div class="piece-name">King</div>
+    <div class="info">Moves one square in any direction. The most important piece—protect it at all costs!</div>
+  </div>
 
 </body>
 </html>

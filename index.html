@@ -3,65 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Fool's Guide to Chess</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 250px; /* spacing between boxes so info panels have room */
-      padding: 20px;
-    }
-
-    .piece-box {
-      width: 150px;
-      height: 150px;
-      background: #fff;
-      border: 2px solid #333;
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    .piece-box:hover {
-      transform: scale(1.05);
-    }
-
-    .piece-name {
-      font-size: 20px;
-      font-weight: bold;
-      z-index: 1;
-    }
-
-    .info {
-      position: absolute;
-      top: 0;
-      left: 100%; /* appear to the right */
-      width: 200px;
-      height: 100%;
-      background: rgba(0,0,0,0.85);
-      color: #fff;
-      padding: 10px;
-      font-size: 14px;
-      opacity: 0;
-      transform: translateX(20px); /* start slightly offset */
-      transition: opacity 0.4s ease, transform 0.4s ease;
-      border-radius: 0 8px 8px 0;
-      display: flex;
-      align-items: center;
-      z-index: 10; /* ensure it layers above neighbors */
-    }
-
-    .piece-box:hover .info {
-      opacity: 1;
-      transform: translateX(0); /* slide in smoothly */
-    }
-  </style>
+ 
 </head>
 <body>
 
